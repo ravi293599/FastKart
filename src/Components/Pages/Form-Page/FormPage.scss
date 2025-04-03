@@ -1,0 +1,177 @@
+@import "../../../App.scss";
+
+.Form-row{
+    padding: 100px 180px;
+    display: flex;
+    gap: 30px;
+    background-image: url("../../../Assets/Images/log-in-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .form-img{
+        padding: 20px;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        img{
+            width: 100%;
+        }
+    }
+    .form-container{
+        background: $light-grey;
+        padding: 30px;
+        border-radius: 10px;
+        width: 50%;
+        margin: auto;
+        h3{
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.7;
+        }
+        p{
+            color: $light-dark;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            .floating-field{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                input[type="text"],input[type="email"],input[type="password"]{
+                    border: 1px solid $greish;
+                    padding: 15px 10px;
+                    border-radius: 5px 0 0 5px;
+                    font-size: 16px;
+                    outline: 0;
+                }
+
+                .floating-input.has-value ~ .floating-label{
+                    font-size: 12px;
+                    top: -7px;
+                    background: #fff;
+                    padding: 2px 5px;
+                    border-radius: 3px;
+                }
+                .floating-label{
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    color: $light-dark;
+                    transition: 0.3s ease-in-out;
+                    pointer-events: none;
+                }
+                .error-message {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #f00;
+                    margin-top: 5px;
+                }
+            }
+            
+            .checkbox-container {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                .check-label {
+                    display: flex;
+                    gap: 10px;
+                    .custom-checkbox{
+                        display: flex;
+                        gap: 10px;
+                        cursor: pointer;
+                        input[type="checkbox"]{
+                            display: none;
+                        }
+                        & input[type="checkbox"]:checked + .check-span::after{
+                            opacity: 1;
+                            visibility: visible;
+                            transform: rotate(45deg) scale(1,1);
+                        }
+                        .check-span{
+                            width: 20px;
+                            height: 20px;
+                            display: block;
+                            background: $white;
+                            border: 1px solid $grey;
+                            border-radius: 3px;
+                            cursor: pointer;
+                            position: relative;
+                            transition: 0.3s ease-in-out;
+                            &::after{
+                                content: "";
+                                width: 6px;
+                                height: 12px;
+                                top: 2px;
+                                left: 6px;
+                                position: absolute;
+                                border-right: 2px solid #0d6efd;
+                                border-bottom: 2px solid #0d6efd;
+                                transform: rotate(45deg) scale(0, 0);
+                                opacity: 0;
+                                visibility: hidden;
+                            }
+                        }
+                    }
+                    p{
+                        margin-bottom: 0px !important;
+                    }
+                }
+            }
+        }
+        .log-in-button {
+            border-top: 2px solid $grey;
+            border-bottom: 2px solid $grey;
+            margin-top: 30px;
+            padding: 30px 0;
+            position: relative;
+            .or {
+                position: absolute;
+                top: -12px;
+                text-align: center;
+                background: $grey;
+                padding: 2px 15px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 5px;
+                font-size: 14px;
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding-left: 0rem;
+                margin-bottom: 0rem;
+                li{
+                    a{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        background: $white;
+                        padding: 15px;
+                        border-radius: 5px;
+                        img{
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .sign-up-box{
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            p{
+                margin-bottom: 0rem;
+            }
+        }
+    }
+}

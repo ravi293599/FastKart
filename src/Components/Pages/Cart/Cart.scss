@@ -1,0 +1,188 @@
+@import "../../../App.scss";
+.Cart-container{
+    @extend .common-padding;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .Cart-div{
+        background: $light-grey;
+        padding: 30px;
+        .Cart-row {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 30px;
+            border-top: 1px solid $grey;
+            padding: 25px 0;
+            &:first-child{
+                border-top: 0px;
+            }
+            .Cart-col {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                img{
+                    width: 100%;
+                }
+                p{
+                    font-size: 15px;
+                    color: $secondary-color;
+                }
+                h3 {
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+                h4{
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+                span{
+                    p{
+                        font-size: 14px;
+                        line-height: 1.4;
+                        font-weight: 500;
+                        span{
+                            font-weight: 200;
+                        }
+                    }
+                }
+                .item-pricing{
+                    p{
+                        font-size: 16px;
+                        strike{
+                            color: $light-dark;
+                        }
+                        &:last-child{
+                            color: $primary-color;
+                        }
+                    }
+                    
+                }
+                .quantity-ctrlBtn {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .quantity{
+                        font-size: 15px;
+                    }
+                    .decrement,.increment{
+                        padding: 10px;
+                        background: #ececec;
+                        border-radius: 30px;
+                        width: 20px;
+                        height: 20px;
+                        font-size: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        position: relative;
+                    }
+                    .decrement{
+                        &:after{
+                            content:"_";
+                            position: absolute;
+                            top: -11px;
+                        }
+                    }
+                    .increment{
+                        &:after{
+                            content:"+";
+                            position: absolute;
+                            top: 1px;
+                        }
+                    }
+                }
+                .Cart-ctrlBtn{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    a{
+                        text-decoration: underline;
+                        &:first-child{
+                            color: #0da487;
+                        }
+                        &:last-child{
+                            color: #bf2020;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .Cart-price{
+        background: $light-grey;
+        padding: 30px;
+        .price-top {
+            padding-bottom: 20px;
+        }
+        .price-middle{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 25px 0;
+            position: relative;
+            .coupon {
+                background: $primary-color;
+                display: flex;
+                padding: 2px;
+                border-radius: 5px;
+                align-items: center;
+                justify-content: center;
+                .search-bar{
+                    width: 100%;
+                }
+                .search-btn{
+                    height: auto;
+                    width: 10%;
+                    font-weight: 700;
+                    font-size: 14px;
+                }
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                border-top: 1px solid $grey;
+                width: 100%;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                border-bottom: 1px solid $grey;
+                width: 100%;
+            }
+        }
+        .price-bottom{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .btn-form{
+                font-size: 14px;
+                &:last-child{
+                    background: $grey;
+                    color: $secondary-color;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    svg{
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+.total-list {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    li{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

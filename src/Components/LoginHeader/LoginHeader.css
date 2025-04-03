@@ -110,4 +110,54 @@ button {
   font-weight: 300;
   color: #f00;
   padding-top: 5px;
-}/*# sourceMappingURL=App.css.map */
+}
+
+.Login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: #ececec;
+}
+.Login-header .Login-Heading {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+}
+.Login-header .Login-icon {
+  display: flex;
+  align-items: center;
+  color: #222;
+  gap: 30px;
+  position: relative;
+}
+.Login-header .Login-icon span svg {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  color: #4a5568;
+}
+.Login-header .Login-icon span:last-child {
+  margin-top: 3px;
+}
+.Login-header .Login-icon span:last-child::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 32px;
+  width: 10px;
+  height: 2px;
+  background: #222;
+  transform: rotate(45deg);
+}
+.Login-header .Login-icon span:last-child::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 32px;
+  width: 10px;
+  height: 2px;
+  background: #222;
+  transform: rotate(-45deg);
+}/*# sourceMappingURL=LoginHeader.css.map */

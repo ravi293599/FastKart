@@ -1,0 +1,150 @@
+@import "../../App.scss";
+footer {
+    @extend .common-padding;
+    background: $light-grey;
+    background-image: url("../../Assets/Images/footer-shape.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    .Top-Footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap:20px;
+        padding: 40px 0;
+        .OSP {
+            display: flex;
+            width: 49%;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+            &:first-child{
+                border-right: 2px dashed $light-dark;
+            }
+            &:nth-child(3){
+                border-right: 2px dashed $light-dark;
+            }
+        }
+    }
+    .Main-Footer {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-content: space-between;
+        gap: 30px;
+        padding: 40px 0;
+        border-top: 1px dashed $dark-grey;
+        border-bottom: 1px dashed $dark-grey;
+        .footer-logo{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            img{
+                width: 160px;
+            }
+            p{
+                color: $light-dark;
+                font-size: 14px;
+                line-height: 1.5;
+                width: 100%;
+            }
+            a{
+                display: flex;
+                color: $light-dark;
+                gap: 10px;
+                svg{
+                    width: 20px;
+                    height: 20px;
+                }
+                &:hover{
+                    color: $primary-color;
+                    p{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+        .Categories,.Useful-Links,.Help-Center{
+            h4{
+                font-size: 18px;
+                font-weight: 600;
+                color: $secondary-color;
+                margin-bottom: 20px;
+            }
+            li{
+                a{
+                    color: $light-dark;
+                    font-size: 14px;
+                    line-height: 30px;
+                    position: relative;
+                    transition: all 0.3s ease-in-out;
+                    &::after{
+                        @extend .after-effect;
+                        top: 20px;
+    
+                    }
+                }
+                &:hover{
+                    a{
+                        margin-left: 13px;
+                        color: $primary-color;
+                        &::after{
+                            width: 100%;
+                        }
+                    } 
+                }
+            }
+        }
+        .Contact-Us{
+            h4{
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+            .contact-details {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 10px;
+                padding-top: 10px;
+                .contact-data{
+                    padding-bottom: 20px;
+                    border-bottom: 1px dashed $light-dark;
+                    p:first-child{
+                        font-size: 14px;
+                        color: $light-dark;
+                        margin-bottom: 7px;
+                    }
+                    p:last-child{
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: $secondary-color;
+                    }
+                }
+            }
+            .download-app{
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+
+                div{
+                    display: flex;
+                    gap: 10px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .Footer-credit {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        color: $light-dark;
+        font-size: 14px;
+        padding: 40px 0;
+        div:last-child{
+            display: flex;
+            gap: 8px;
+            a{
+                color: $light-dark;
+            }
+        }
+    }
+}

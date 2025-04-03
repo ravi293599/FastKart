@@ -1,0 +1,268 @@
+@import "../../App.scss";
+header{
+    @extend .common-padding;
+}
+.Main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .Logo {
+        width: 180px;
+        img{
+            width: 100%;
+        }
+    }
+    .Location{
+        padding: 10px;
+        .Location-btn{
+            width: 100%;
+            background: transparent;
+            border: 1px solid $grey;
+            padding: 7px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            .location-arrow{
+                display: inline-block;
+                background: $grey;
+                color: $secondary-color;
+                padding: 7px;
+                border-radius: 5px;
+                svg{
+                    width: 16px;
+                    height: 16px;
+                    display: inline-block;
+                }
+            }
+            .Location-text{
+                color: $primary-color;
+                font-size: 16px;
+                font-weight: 600;
+            }
+            .Location-icon{
+                svg{
+                    height: 18px;
+                    width: 18px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .Search{
+        display: flex;
+        padding: 10px;
+        
+    }
+    .Header-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: $secondary-color;
+
+        .delivery-icon {
+            // display: flex;
+            display: none;
+            gap: 10px;
+            padding: 0 10px;
+            .delivery-content{
+                display: none;
+                p{
+                    font-size: 14px;
+                    &:last-child{
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        .Like-icon{
+            padding: 0 10px;
+            //border-left: 1px solid $secondary-color;
+            a{
+                color: $secondary-color
+            }
+        }
+        .cart-icon{
+            padding: 0 10px;
+            border-left: 1px solid $secondary-color;
+            .cart-div{
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                .cart-button{
+                    background: transparent;
+                    border: 0;
+                    outline: 0;
+                    position: relative;
+                    color: $secondary-color;
+                    span{
+                        position: absolute;
+                        top: -5px;
+                        left: 15px;
+                        background-color: #ff7272;
+                        color: #fff;
+                        font-size: 12px;
+                        padding: 0px 5px;
+                        border-radius: 3px;
+                    }
+                }
+                .cart-expension{
+                    background-color: #fff;
+                    width: 300px;
+                    position: absolute;
+                    z-index: 2;
+                    top: 60px;
+                    right: -20px;
+                    border-radius: 7px;
+                    padding: 20px;
+                    opacity: 0;
+                    visibility: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    box-shadow: -1px 0 10px 0 rgb(34 34 34 / 7%), 5px 20px 40px 0 rgb(34 34 34 / 4%);
+                    -webkit-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+                    .cart-items{
+                        display: flex;
+                        gap: 10px;
+                        .item-image{
+                            width: 30%;
+                            background: $grey;
+                            padding: 10px;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .item-data{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            gap: 8px;
+                            .item-close{
+                                display: flex;
+                                justify-content: flex-end;
+                                font-weight: 500;
+                                color: $secondary-color;
+                                cursor: pointer;
+                            }
+                            h4{
+                                color: $primary-color;
+                                font-weight: 600;
+                                font-size: 16px;
+                                margin-bottom: 0px;
+                            }
+                            p{
+                                color: $secondary-color;
+                                margin-bottom: 0;
+                                span{
+                                    font-size: 12px;
+                                    padding: 0 3px;
+                                }
+                            }
+                        }
+                    }
+                    hr{
+                        border-color: $grey;
+                    }
+                    .cart-price{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        padding-top: 20px;
+                        border-top: 1px solid $grey;
+                        .Total-price{
+                            display: flex;
+                            justify-content: space-between;
+                            p{
+                                font-size: 18px;
+                                color: $secondary-color;
+                                &:last-child{
+                                    color: $primary-color;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                        .checkout{
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+            }
+            &:hover .cart-expension{
+                visibility: visible;
+                opacity: 1;
+                top: 50px;
+            }
+        }
+        .user-icon{
+            padding: 0 10px;
+            border-left: 1px solid $secondary-color;
+            position: relative;
+            cursor: pointer;
+            .user-div{
+                display: flex;
+                gap: 10px;
+                .user-details{
+                    display: none;
+                    p{
+                        font-size: 14px;
+                        &:last-child{
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+            .user-login {
+                position: absolute;
+                top: 50px;
+                right: 0px;
+                width: 160px;
+                padding: 20px;
+                background: $white;
+                box-shadow: -1px 0 10px 0 rgb(34 34 34 / 7%), 5px 20px 40px 0 rgb(34 34 34 / 4%);
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                border-radius: 8px;
+                z-index: 2;
+                opacity: 0;
+                visibility: hidden;
+                ul{
+                    padding-left: 0rem;
+                    margin-bottom: 0rem;
+                    li{
+                        font-size: 15px;
+                        line-height: 2;
+                        a{
+                            color: $secondary-color;
+                            position: relative;
+                            &::after{
+                                content: "";
+                                width: 0px;
+                                height: 3px;
+                                background: $primary-color;
+                                position: absolute;
+                                left: 0;
+                                top: 20px;
+                                border-radius: 3px;
+                                -webkit-transition: all 0.3s ease-in-out;
+                                transition: all 0.3s ease-in-out;
+                            }
+                        }
+                        &:hover a::after{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            &:hover .user-login{
+                visibility: visible;
+                opacity: 1;
+                top: 40px;
+            }
+        }
+    }
+}

@@ -1,0 +1,243 @@
+import React, { useState, useEffect } from "react";
+import "./FormPage.css";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
+import api from "./axios";
+import { v4 as uuid } from 'uuid';
+import goggleLogo from "../../../Assets/Images/google.png";
+import facebookLogo from "../../../Assets/Images/facebook.png";
+
+const FormPage = (props) => {
+  const navigate = useNavigate();
+  const loginSchema = Yup.object({
+    name: Yup.string().min(6).max(30).required('Name should be 6 to 30 character long.'),
+    email: Yup.string().email().required("Please Enter Valid Email"),
+    password: Yup.string()
+      .min(6)
+      .max(15)
+      .required("Password should be 6 to 15 character long"),
+    termsConditions: Yup.bool().oneOf([true], "The terms and conditions must be accepted.").required("The terms and conditions must be accepted.")
+  });
+  let [booValue, setBooValue] = useState(false)
+  const [Register, Setregister] = useState(false)
+  const [Forget, Setforget] = useState(false)
+  const [auth, setAuth] = useState({
+    id: '',
+    name: '',
+    email: '',
+    password: ''
+})
+  const initialValues = {
+    name: "",
+    email: "",
+    password: "",
+  };
+  let { values, errors, touched, handleBlur, handleChange, handleSubmit } =
+    useFormik({
+      initialValues: initialValues,
+      validationSchema: loginSchema,
+      onSubmit: (e, a) => {
+        let id = uuid();
+        let name = e.name;
+        let email = e.email;
+        let password = e.password;
+        if(Register){
+          api
+          .get("/auth")
+          .then((e) => {
+            let authData = e.data;
+            let authDataObj = authData.find((e) => e.email === email);
+            if (
+              authDataObj.email === email &&
+              authDataObj.password === password
+            ) {
+              console.log("successfull login");
+              localStorage.setItem("auth", JSON.stringify(authDataObj.id));
+            } else {
+              console.error("something went wrong");
+            }
+          })
+          .then(() => {
+            props.isLogin();
+          })
+          .then(() => {
+            navigate("/isloggedin");
+          });
+          a.resetForm();
+        }
+        else{
+          api.get('/auth').then((e)=>{
+            let authData = e.data
+            let authDataObj = authData.find(e => e.email === email)
+            if(authDataObj){
+                alert('this email already exit')
+            }else {
+                setAuth({
+                    id: id,
+                    name: name,
+                    email: email,
+                    password: password
+                })
+                setBooValue(true)
+            }
+            a.resetForm()
+          })
+        }
+      },
+    });
+    
+    useEffect(()=>{
+      if(props.btnName === "Sign-up"){
+        Setregister(true);
+      }
+      if(props.btnName === "Forget Password"){
+        Setforget(true);
+      }
+      if(Register){
+        let fetchdata = async() => {
+          try {
+              await api.post('/auth', auth)
+              setAuth({
+                  id: '',
+                  name: '',
+                  email: '',
+                  password: ''
+              })
+              alert('you have successfully registered')
+          } catch {
+              alert('some error occured')
+          }
+          setBooValue(false)
+        }
+        if(booValue){
+          fetchdata();
+      } else {
+          setBooValue(false)
+      }
+      } 
+   }, [auth])
+  return (
+    <>
+      <div className="Form-row">
+        <div className="form-img">
+          <img src={props.src} alt={props.imgName} />
+        </div>
+        <div className="form-container">
+          <h3>Welcome To Fastkart</h3>
+          <p>{props.tagLine}</p>
+          <form onSubmit={handleSubmit}>
+          {Register && <div className="floating-field">
+              <input
+                placeholder="Enter Your Full Name"
+                type="text"
+                name="name"
+                className={`
+                form-control 
+                logForm 
+                ${errors.name && touched.name ? "errorFormTag" : null} 
+                `}
+                value={values.name || ""}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                aria-describedby="emailHelp"
+              />
+              {errors.name && touched.name ? (
+                <span className="error-message">{errors.name}</span>
+              ) : null}
+            </div>}
+            <div className="floating-field">
+              <input
+                placeholder="Enter Your Email"
+                type="email"
+                name="email"
+                className={`
+                form-control 
+                logForm 
+                ${errors.email && touched.email ? "errorFormTag" : null} 
+                `}
+                value={values.email || ""}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                aria-describedby="emailHelp"
+              />
+              {errors.email && touched.email ? (
+                <span className="error-message">{errors.email}</span>
+              ) : null}
+            </div>
+            {!Forget && <>
+              <div className="floating-field">
+              <input
+                placeholder="Enter Your Password"
+                type="password"
+                name="password"
+                className={`
+                form-control 
+                logForm 
+                ${errors.password && touched.password ? "errorFormTag" : null} 
+                `}
+                value={values.password || ""}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+              {errors.password && touched.password ? (
+                <span className="error-message">{errors.password}</span>
+              ) : null}
+            </div>
+            </>}
+            {!Forget && <>
+              <div className="checkbox-container">
+              <div className="check-label">
+                <label className="custom-checkbox">
+                  <input type="checkbox" />
+                  <span className="check-span"></span>
+                  <p>{props.checkData}</p>
+                </label>
+              </div>
+              {!Register ? <>
+              <div className="checkbox-content">
+                <a href="/forgetPassword">Forget Password?</a>
+              </div>
+              </>:"" }
+            </div>
+            </>}
+            <button type="submit" className="btn-form">
+              {props.btnName}
+            </button>
+          </form>
+          {!Forget && <>
+            <div className="log-in-button">
+            <div className="or">OR</div>
+            <ul>
+              <li>
+                <a href="https://www.google.com/">
+                  <img src={goggleLogo} alt="Google btn" />
+                  Log In with Google
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/">
+                  <img src={facebookLogo} alt="Facebook btn" />
+                  Log In with Facebook
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="sign-up-box">
+            {Register? 
+            <>
+            <p>Already have an account?</p>
+            <a href="/login">Log In</a>
+            </>:<>
+            <p>Don't have an account?</p>
+            <a href="/register">Sign Up</a>
+            </>}
+          </div>
+          </>}
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default FormPage;

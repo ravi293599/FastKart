@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "url": "Images/Item1.png",
+        "category": "Vegetable",
+        "title": "Fresh Bread and Pastry Flour",
+        "numericalRating": 4.0,
+        "size": "250 gm",
+        "currentPrice": "$08.02",
+        "oldPrice": "$15.15"
+    },
+    {
+        "id": 2,
+        "url": "Images/Item2.png",
+        "category": "Vegetable",
+        "title": "Peanut Butter Bite Premium Butter Cookies",
+        "numericalRating": 2.4,
+        "size": "500 gm",
+        "currentPrice": "$04.33",
+        "oldPrice": "$10.36"
+    },
+    {
+        "id": 3,
+        "url": "Images/Item3.png",
+        "category": "Snacks",
+        "title": "SnackAmor Combo Pack of Jowar Stick and Jowar Chips",
+        "numericalRating": 5.0,
+        "size": "570 gm",
+        "currentPrice": "$12.52",
+        "oldPrice": "$13.62"
+    },
+    {
+        "id": 4,
+        "url": "Images/Item4.png",
+        "category": "Snacks",
+        "title": "Yumitos Chilli Sprinkled Potato Chips",
+        "numericalRating": 3.8,
+        "size": "100 gm",
+        "currentPrice": "$10.25",
+        "oldPrice": "$12.36"
+    },
+    {
+        "id": 5,
+        "url": "Images/Item5.png",
+        "category": "Vegetable",
+        "title": "Fantasy Crunchy Choco Chip Cookies",
+        "numericalRating": 4.0,
+        "size": "550 gm",
+        "currentPrice": "$14.25",
+        "oldPrice": "$16.57"
+    },
+    {
+        "id": 6,
+        "url": "Images/Item6.png",
+        "category": "Snacks",
+        "title": "Fresh Bread and Pastry Flour",
+        "numericalRating": 3.8,
+        "size": " 200 gm",
+        "currentPrice": "$12.68",
+        "oldPrice": "$14.69"
+    },
+    {
+        "id": 7,
+        "url": "Images/Item1.png",
+        "category": "Vegetable",
+        "title": "Fresh Bread and Pastry Flour",
+        "numericalRating": 4.0,
+        "size": "200 gm",
+        "currentPrice": "$08.02",
+        "oldPrice": "$15.15"
+    },
+    {
+        "id": 8,
+        "url": "Images/Item2.png",
+        "category": "Vegetable",
+        "title": "Peanut Butter Bite Premium Butter Cookies",
+        "numericalRating": 2.4,
+        "size": "600 gm",
+        "currentPrice": "$04.33",
+        "oldPrice": "$10.36"
+    },
+    {
+        "id": 9,
+        "url": "Images/Item3.png",
+        "category": "Snacks",
+        "title": "SnackAmor Combo Pack of Jowar Stick and Jowar Chips",
+        "numericalRating": 5.0,
+        "size": "570 gm",
+        "currentPrice": "$12.52",
+        "oldPrice": "$13.62"
+    },
+    {
+        "id": 10,
+        "url": "Images/Item4.png",
+        "category": "Snacks",
+        "title": "Yumitos Chilli Sprinkled Potato Chips",
+        "numericalRating": 2.8,
+        "size": "100 gm",
+        "currentPrice": "$10.25",
+        "oldPrice": "$12.36"
+    },
+    {
+        "id": 11,
+        "url": "Images/Item5.png",
+        "category": "Vegetable",
+        "title": "Fantasy Crunchy Choco Chip Cookies",
+        "numericalRating": 4.0,
+        "size": "550 gm",
+        "currentPrice": "$14.24",
+        "oldPrice": "$13.56"
+    },
+    {
+        "id": 12,
+        "url": "Images/Item6.png",
+        "category": "Vegetable",
+        "title": "Fresh Bread and Pastry Flour",
+        "numericalRating": 4.0,
+        "size": "200 gm",
+        "currentPrice": "$12.68",
+        "oldPrice": "$14.90"
+    },
+    {
+        "id": 13,
+        "url": "Images/Item1.png",
+        "category": "Vegetable",
+        "title": "Fresh Bread and Pastry Flour",
+        "numericalRating": 4.0,
+        "size": "200 gm",
+        "currentPrice": "$08.20",
+        "oldPrice": "$10.16"
+    },
+    {
+        "id": 14,
+        "url": "Images/Item2.png",
+        "category": "Vegetable",
+        "title": "Peanut Butter Bite Premium Butter Cookies",
+        "numericalRating": 2.4,
+        "size": "350 gm",
+        "currentPrice": "$04.33",
+        "oldPrice": "$06.66"
+    }
+]

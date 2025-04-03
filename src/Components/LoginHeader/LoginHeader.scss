@@ -1,0 +1,52 @@
+@import "../../App.scss";
+.Login-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: $grey;
+    .Login-Heading {
+        font-size: 20px;
+        font-weight: 600;
+        color: $secondary-color;
+    }
+    .Login-icon{
+        display: flex;
+        align-items: center;
+        color: $secondary-color;
+        gap: 30px;
+        position: relative;
+        span{
+            svg{
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                color: $light-dark;
+            }
+            &:last-child{
+                margin-top: 3px;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 10px;
+                    left: 32px;
+                    width: 10px;
+                    height: 2px;
+                    background: $secondary-color;
+                    transform: rotate(45deg);
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 16px;
+                    left: 32px;
+                    width: 10px;
+                    height: 2px;
+                    background: $secondary-color;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}

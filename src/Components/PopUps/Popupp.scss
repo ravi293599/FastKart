@@ -1,0 +1,118 @@
+@import "../../app.scss";
+.overlay{
+    background: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    .popup {
+        width: 430px;
+        background: $white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 25px;
+        border-radius: 5px;
+        .popup-header{
+            h3{
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 1.8;
+                color: $secondary-color;
+            }
+            p{
+                font-size: 14px;
+                font-weight: 400;
+                color: $light-dark;
+            }
+        }
+        .pop-close {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: $primary-color;
+            color: $white;
+            padding: 3px 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            svg{
+                width: 20px;
+                display: inline-block;
+                height: 20px;
+            }
+        }
+        .popup-body {
+            padding: 30px 0 0;
+            position: relative;
+            .search-bar{
+                width: 100%;
+                border-radius: 5px;
+                padding-left: 45px;
+            }
+            .search-icon {
+                position: absolute;
+                top: 42px;
+                left: 15px;
+                color: $secondary-color;
+            }
+            .select-location {
+                padding-top: 20px;
+                .location-text{
+                    padding-left: 10px;
+                    font-size: 14px;
+                    color: $light-dark;
+                }
+                .location-scroll{
+                    overflow-y: scroll;
+                    height: 150px;
+                    margin-top: 15px;
+                    border-top: 1px solid $light-dark;
+                    &::-webkit-scrollbar-thumb {
+                        border-radius: 10px;
+                        background-color: rgba(85,85,85,0.5);
+                    }
+                    &::-webkit-scrollbar-track {
+                        border-radius: 10px;
+                        background-color: rgba(85,85,85,0.14);
+                    }
+                    &::-webkit-scrollbar {
+                        width: 4px;
+                        background-color: #f5f5f5;
+                        border-radius: 50px;
+                    }
+                    ul{
+                        li{
+                            display: flex;
+                            justify-content: space-between;
+                            font-size: 14px;
+                            color: $light-dark;
+                            padding: 10px;
+                            cursor: pointer;
+                            .price {
+                                border: 1px solid $light-dark;
+                                padding: 5px 10px;
+                                border-radius: 30px;
+                                font-size: 10px;
+                                span{
+                                    margin: 0 2px 0 5px;
+                                }
+                            }
+                            &:hover{
+                                background: $primary-color-light;
+                                color: $primary-color;
+                                .price {
+                                    background: $primary-color;
+                                    color: $white;
+                                    border-color: $primary-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

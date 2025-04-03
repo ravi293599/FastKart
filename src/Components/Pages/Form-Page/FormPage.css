@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Public Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.common-padding {
+  padding: 20px 120px;
+}
+
+.btn-primary {
+  background: #d99f46;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 15px 10px;
+  border-radius: 5px;
+}
+
+.btn-secondary {
+  color: #d99f46;
+  border: 2px solid #d99f46;
+  font-size: 16px;
+  padding: 8px 15px 10px;
+  border-radius: 5px;
+}
+.btn-secondary:hover {
+  background: #d99f46;
+  color: #fff;
+}
+
+.search-bar {
+  width: 432px;
+  border: 1px solid #ececec;
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+  outline: 0;
+}
+.search-bar:focus {
+  border: 1px solid #d99f46;
+}
+
+.search-btn {
+  background: #d99f46;
+  color: #fff;
+  border: 1px solid #d99f46;
+  border-radius: 0px 5px 5px 0px;
+  width: 50px;
+  height: 50px;
+}
+
+.after-effect {
+  content: "";
+  width: 0px;
+  height: 3px;
+  background: #d99f46;
+  position: absolute;
+  left: 0;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-form {
+  transition: all 0.3s ease;
+  position: relative;
+  color: #fff;
+  background: linear-gradient(90deg, #ff6b6b 0%, #ff4f4f 100%);
+  border-radius: 5px;
+  font-weight: 600;
+  outline: 0;
+  border: 0;
+  padding: 12px;
+  font-size: 18px;
+}
+.btn-form::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+  background: #ff4f4f;
+  background: linear-gradient(90deg, #ff4f4f 0%, #ff6b6b 100%);
+  transition: all 0.3s ease;
+}
+.btn-form:hover::after {
+  top: 0;
+  height: 100%;
+}
+
+.error {
+  font-size: 12px;
+  font-weight: 300;
+  color: #f00;
+  padding-top: 5px;
+}
+
+.Form-row {
+  padding: 100px 180px;
+  display: flex;
+  gap: 30px;
+  background-image: url("../../../Assets/Images/log-in-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.Form-row .form-img {
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.Form-row .form-img img {
+  width: 100%;
+}
+.Form-row .form-container {
+  background: #f8f8f8;
+  padding: 30px;
+  border-radius: 10px;
+  width: 50%;
+  margin: auto;
+}
+.Form-row .form-container h3 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+.Form-row .form-container p {
+  color: #4a5568;
+  margin-bottom: 20px;
+}
+.Form-row .form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.Form-row .form-container form .floating-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.Form-row .form-container form .floating-field input[type=text], .Form-row .form-container form .floating-field input[type=email], .Form-row .form-container form .floating-field input[type=password] {
+  border: 1px solid #ced4da;
+  padding: 15px 10px;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+  outline: 0;
+}
+.Form-row .form-container form .floating-field .floating-input.has-value ~ .floating-label {
+  font-size: 12px;
+  top: -7px;
+  background: #fff;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+.Form-row .form-container form .floating-field .floating-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #4a5568;
+  transition: 0.3s ease-in-out;
+  pointer-events: none;
+}
+.Form-row .form-container form .floating-field .error-message {
+  font-size: 14px;
+  font-weight: 500;
+  color: #f00;
+  margin-top: 5px;
+}
+.Form-row .form-container form .checkbox-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.Form-row .form-container form .checkbox-container .check-label {
+  display: flex;
+  gap: 10px;
+}
+.Form-row .form-container form .checkbox-container .check-label .custom-checkbox {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+.Form-row .form-container form .checkbox-container .check-label .custom-checkbox input[type=checkbox] {
+  display: none;
+}
+.Form-row .form-container form .checkbox-container .check-label .custom-checkbox input[type=checkbox]:checked + .check-span::after {
+  opacity: 1;
+  visibility: visible;
+  transform: rotate(45deg) scale(1, 1);
+}
+.Form-row .form-container form .checkbox-container .check-label .custom-checkbox .check-span {
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.Form-row .form-container form .checkbox-container .check-label .custom-checkbox .check-span::after {
+  content: "";
+  width: 6px;
+  height: 12px;
+  top: 2px;
+  left: 6px;
+  position: absolute;
+  border-right: 2px solid #0d6efd;
+  border-bottom: 2px solid #0d6efd;
+  transform: rotate(45deg) scale(0, 0);
+  opacity: 0;
+  visibility: hidden;
+}
+.Form-row .form-container form .checkbox-container .check-label p {
+  margin-bottom: 0px !important;
+}
+.Form-row .form-container .log-in-button {
+  border-top: 2px solid #ececec;
+  border-bottom: 2px solid #ececec;
+  margin-top: 30px;
+  padding: 30px 0;
+  position: relative;
+}
+.Form-row .form-container .log-in-button .or {
+  position: absolute;
+  top: -12px;
+  text-align: center;
+  background: #ececec;
+  padding: 2px 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  font-size: 14px;
+}
+.Form-row .form-container .log-in-button ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 0rem;
+  margin-bottom: 0rem;
+}
+.Form-row .form-container .log-in-button ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+}
+.Form-row .form-container .log-in-button ul li a img {
+  width: 20px;
+  height: 20px;
+}
+.Form-row .form-container .sign-up-box {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.Form-row .form-container .sign-up-box p {
+  margin-bottom: 0rem;
+}/*# sourceMappingURL=FormPage.css.map */

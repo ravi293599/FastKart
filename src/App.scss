@@ -1,0 +1,110 @@
+@import "./_variable.scss";
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Public Sans', sans-serif;
+}
+a{
+    text-decoration: none;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+
+ul{
+    list-style: none;
+}
+button{
+    cursor: pointer;
+}
+.common-padding{
+    padding: 20px 120px;
+}
+.btn-primary{
+    background: $primary-color;
+    color: $white;
+    font-size: 16px;
+    padding: 10px 15px 10px;
+    border-radius: 5px;
+}
+.btn-secondary{
+    color: $primary-color;
+    border: 2px solid $primary-color;
+    font-size: 16px;
+    padding: 8px 15px 10px;
+    border-radius: 5px;
+    &:hover{
+        background: $primary-color;
+        color: $white;
+    }
+}
+.search-bar{
+    width:432px;
+    border: 1px solid $grey;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    outline: 0;
+    &:focus{
+        border: 1px solid $primary-color;
+    }
+}
+.search-btn {
+    background: $primary-color;
+    color: #fff;
+    border: 1px solid $primary-color;
+    border-radius: 0px 5px 5px 0px;
+    width: 50px;
+    height: 50px;
+}
+.after-effect{
+    content: "";
+    width: 0px;
+    height: 3px;
+    background: $primary-color;
+    position: absolute;
+    left: 0;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+.btn-form{
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    color: $white; 
+    background: linear-gradient(90deg, #ff6b6b 0%, #ff4f4f 100%);
+    border-radius: 5px;
+    font-weight: 600;
+    outline: 0;
+    border: 0;
+    padding: 12px;
+    font-size: 18px;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 5px;
+        background: #ff4f4f;
+        background: -webkit-gradient(linear, left top, right top, from(#ff4f4f), to(#ff6b6b));
+        background: linear-gradient(90deg, #ff4f4f 0%, #ff6b6b 100%);
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    &:hover{
+        &::after{
+            top: 0;
+            height: 100%;
+        }
+    }
+}
+.error {
+    font-size: 12px;
+    font-weight: 300;
+    color: #f00;
+    padding-top: 5px;
+}
