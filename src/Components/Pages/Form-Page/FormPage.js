@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./FormPage.css";
+import "./FormPage.scss";
 import {toast} from "react-toastify";
 import { useDispatch } from "react-redux"
 import { useFormik } from "formik";

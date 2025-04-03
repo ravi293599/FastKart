@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Footer.css"
+import "./Footer.scss"
 import product from "../../Assets/Images/product.svg"
 import delivery from "../../Assets/Images/delivery.svg"
 import discount from "../../Assets/Images/discount.svg"
@@ -37,35 +37,35 @@ const Footer = () => {
       </div>
       <div className='Main-Footer'>
         <div className='footer-logo'>
-          <img src={logo} />
+          <img src={logo} alt="logo" />
           <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form.</p>
-          <a href="#"><FiHome /><p>Building Number 22 Sector 40, Greater Noida UP</p></a>
+          <a href="https://www.google.co.in/maps"><FiHome /><p>Building Number 22 Sector 40, Greater Noida UP</p></a>
           <a href='mailto:support@fastkart.com'><FiMail /><p>support@fastkart.com</p></a>
         </div>
         <div className='Categories'>
           <h4>Categories</h4>
           <ul>
             <li>
-              <a href="">Cookies</a>
+              <a href="#">Cookies</a>
             </li>
             <li>
-              <a href="">Cake</a>
+              <a href="#">Cake</a>
             </li>
             <li>
-              <a href="">Pastries</a>
+              <a href="#">Pastries</a>
             </li>
             <li>
-              <a href="">
+              <a href="#">
                 Bread
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#">
                 Snacks
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#">
                 Namkeens
               </a>
             </li>
@@ -75,19 +75,19 @@ const Footer = () => {
           <h4>Useful Links</h4>
           <ul>
             <li>
-              <a href=''>Home</a>
+              <a href='#'>Home</a>
             </li>
             <li>
-              <a href=''>Shop</a>
+              <a href='#'>Shop</a>
             </li>
             <li>
-              <a href=''>About Us</a>
+              <a href='#'>About Us</a>
             </li>
             <li>
-              <a href=''>Blog</a>
+              <a href='#'>Blog</a>
             </li>
             <li>
-              <a href=''>Contact Us</a>
+              <a href='#'>Contact Us</a>
             </li>
           </ul>
         </div>
@@ -95,22 +95,22 @@ const Footer = () => {
           <h4>Help Center</h4>
           <ul>
           <li>
-            <a href=''>Your Order</a>
+            <a href='#'>Your Order</a>
           </li>
           <li>
-            <a href=''>Your Account</a>
+            <a href='#'>Your Account</a>
           </li>
           <li>
-            <a href=''>Track Order</a>
+            <a href='#'>Track Order</a>
           </li>
           <li>
-            <a href=''>Your Wishlist</a>
+            <a href='#'>Your Wishlist</a>
           </li>
           <li>
-            <a href=''>Search</a>
+            <a href='#'>Search</a>
           </li>
           <li>
-            <a href=''>FAQ</a>
+            <a href='#'>FAQ</a>
           </li>
           </ul>
         </div>
@@ -137,8 +137,8 @@ const Footer = () => {
           <div className='download-app'>
             <p>Download App :</p>
             <div>
-              <a href=""><img src={playstore} alt="Google play" /></a>
-              <a href=""><img src={appstore} alt="App Store" /></a>
+              <a href="#"><img src={playstore} alt="Google play" /></a>
+              <a href="#"><img src={appstore} alt="App Store" /></a>
             </div>
           </div>
         </div>

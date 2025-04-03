@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import LoginHeader from '../../LoginHeader/LoginHeader'
 import cart1 from "../../../Assets/Images/cart1.png"
-import "./Cart.css"
+import "./Cart.scss"
 import {HiOutlineArrowNarrowLeft} from "react-icons/hi"
 
 const Cart = () => {

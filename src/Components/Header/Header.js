@@ -1,5 +1,5 @@
 import React, { useReducer, useState } from 'react'
-import "./Header.css"
+import "./Header.scss"
 import {toast} from "react-toastify";
 import { IoIosArrowDown } from 'react-icons/io';
 import { IoCloseSharp } from 'react-icons/io5';

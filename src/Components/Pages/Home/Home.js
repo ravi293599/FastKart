@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import "./Home.css"
+import "./Home.scss"
 import pods1 from "../../../Assets/Images/pods1.svg"
 import pods2 from "../../../Assets/Images/pods2.svg"
 import pods3 from "../../../Assets/Images/pods3.svg"

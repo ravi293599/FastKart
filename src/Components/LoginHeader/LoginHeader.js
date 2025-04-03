@@ -1,5 +1,5 @@
 import React from 'react'
-import "./LoginHeader.css"
+import "./LoginHeader.scss"
 import {AiFillHome} from "react-icons/ai"
 
 const LoginHeader = (props) => {

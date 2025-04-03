@@ -1,7 +1,7 @@
 import React from 'react'
 import LoginHeader from '../../LoginHeader/LoginHeader'
 import FormPage from '../Form-Page/FormPage'
-import "./Login.css"
+import "./Login.scss"
 import imageName from "../../../Assets/Images/log-in.png"
 
 const Login = () => {

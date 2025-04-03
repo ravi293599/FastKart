@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Register.css"
+import "./Register.scss"
 import LoginHeader from "../../LoginHeader/LoginHeader"
 import FormPage from "../Form-Page/FormPage"
 import imageName from "../../../Assets/Images/sign-up.png"

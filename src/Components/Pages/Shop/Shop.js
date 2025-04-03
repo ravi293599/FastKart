@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import "./Shop.css"
+import "./Shop.scss"
 import LoginHeader from '../../LoginHeader/LoginHeader'
 //import Item1 from "../../../Assets/Images/Item1.png"
 import {AiOutlineEye, AiOutlineHeart, AiOutlinePlus} from "react-icons/ai";

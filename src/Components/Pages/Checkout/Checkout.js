@@ -1,6 +1,6 @@
 import React from 'react'
 import LoginHeader from '../../LoginHeader/LoginHeader'
-import "./Checkout.css"
+import "./Checkout.scss"
 
 const Checkout = () => {
   return (

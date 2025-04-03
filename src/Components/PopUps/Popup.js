@@ -1,7 +1,7 @@
 import React from 'react'
 import { IoCloseSharp } from "react-icons/io5"
 import { ImSearch } from "react-icons/im"
-import "./Popupp.css"
+import "./Popupp.scss"
 
 const Popup = (props) => {
   return (
