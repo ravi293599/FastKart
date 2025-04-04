@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import "./Home.scss"
 import pods1 from "../../../Assets/Images/pods1.svg"
 import pods2 from "../../../Assets/Images/pods2.svg"
@@ -12,10 +12,10 @@ import {IoLogoWhatsapp} from "react-icons/io"
 import {BsArrowRightShort} from "react-icons/bs"
 import {BiEnvelope} from "react-icons/bi"
 import {AiFillInstagram, AiOutlineTwitter} from "react-icons/ai"
-import { useNavigate } from 'react-router'
+// import { useNavigate } from 'react-router'
 
 const Home = () => {
-    const usenavigate = useNavigate();
+    // const usenavigate = useNavigate();
     // useEffect(() => {
     //     let username = sessionStorage.getItem('name');
     //     if(username === "" || username === null){
@@ -31,7 +31,7 @@ const Home = () => {
                     <p className='spl-text'>Fresh & Delicious</p>
                     <h3>Fresh Bread</h3>
                     <p>Bento box burritos cherry bomb pepper dark and stormy with ginger..</p>
-                    <a href='#'>Shop Now <HiOutlineArrowNarrowRight /></a>
+                    <a href='/'>Shop Now <HiOutlineArrowNarrowRight /></a>
                 </div>
             </div>
             <div className='right'>
@@ -39,7 +39,7 @@ const Home = () => {
                     <p>Exclusive offer <span>30% Off</span></p>
                     <h3><span>WE'LL MAKE</span> HANDMADE <span>YOUR</span> SWEET</h3>
                     <p>Earl grey latte Thai basil curry grains alfalfa sprouts banana bread ginger carrot...</p>
-                    <a href='#' className='btn-primary'>Shop Now <HiOutlineArrowNarrowRight /></a>
+                    <a href='/' className='btn-primary'>Shop Now <HiOutlineArrowNarrowRight /></a>
                 </div>
             </div>
         </div>
@@ -76,28 +76,28 @@ const Home = () => {
             </div>
         </div>
         <div className='link-row'>
-            <a href='#' className='link-card'>
+            <a href='/' className='link-card'>
                 <div className='text-content'>
                     <p className='spl-text'>5% OFF</p>
                     <h5>New Items</h5>
                     <p>Daily Essentials</p>
                 </div>
             </a>
-            <a href='#' className='link-card'>
+            <a href='/' className='link-card'>
                 <div className='text-content'>
                     <p className='spl-text'>5% OFF</p>
                     <h5>Save More</h5>
                     <p>Fresh Toast Rusk</p>
                 </div>
             </a>
-            <a href='#' className='link-card'>
+            <a href='/' className='link-card'>
                 <div className='text-content'>
                     <p className='spl-text'>5% OFF</p>
                     <h5>Fresh Every Day!</h5>
                     <p>Delivery @ Home</p>
                 </div>
             </a>
-            <a href='#' className='link-card'>
+            <a href='/' className='link-card'>
                 <div className='text-content'>
                     <p className='spl-text'>5% OFF</p>
                     <h5>Hot Deals</h5>
@@ -113,22 +113,22 @@ const Home = () => {
                 <p>www.fastkart.com</p>
                 <ul className='social-icon'>
                     <li>
-                        <a href='#'>
+                        <a href='/'>
                             <AiFillInstagram />
                         </a>
                     </li>
                     <li>
-                        <a href='#'>
+                        <a href='/'>
                             <FaFacebookF />
                         </a>
                     </li>
                     <li>
-                        <a href='#'>
+                        <a href='/'>
                             <AiOutlineTwitter />
                         </a>
                     </li>
                     <li>
-                        <a href='#'>
+                        <a href='/'>
                             <IoLogoWhatsapp />
                         </a>
                     </li>

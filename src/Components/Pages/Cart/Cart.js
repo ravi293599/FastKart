@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import LoginHeader from '../../LoginHeader/LoginHeader'
 import cart1 from "../../../Assets/Images/cart1.png"
 import "./Cart.scss"
 import {HiOutlineArrowNarrowLeft} from "react-icons/hi"
 
 const Cart = () => {
-    const [cart, setCart] = useState({})
+    // const [cart, setCart] = useState({})
   return (
     <>
       <LoginHeader heading="Cart" pageName="Cart" />
@@ -44,8 +44,8 @@ const Cart = () => {
                 <div className='Cart-col'>
                     <p>Action</p>
                     <div className='Cart-ctrlBtn'>
-                        <a href="#">Save for later</a>
-                        <a href="#">Remove</a>
+                        <a href="/">Save for later</a>
+                        <a href="/">Remove</a>
                     </div>
                 </div>
             </div>

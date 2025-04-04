@@ -7,19 +7,13 @@ import Logo from "../../Assets/Images/Logo.png"
 import cart1 from "../../Assets/Images/cart1.png"
 import cart2 from "../../Assets/Images/cart2.png"
 import Popup from '../PopUps/Popup';
-import {useSelector,useDispatch} from 'react-redux'
+// import {useSelector,useDispatch} from 'react-redux'
 // import { logout } from '../../store/slices/authSlice';
 // import { useNavigate } from 'react-router';
 
 const Header = () => {
   const [showPopup, setShowpopup] = useState(false)
   const [login, setLogin] = useState(false)
-  // const dispatch = useDispatch()
-  // const navigate = useNavigate()
-  const IsLogin = useSelector((state)=>{
-    return state.auth;
-    setLogin(true);
-  })
   const Islogout = () =>{
     // dispatch(logout())
     setLogin(false);
@@ -126,13 +120,13 @@ const Header = () => {
               </ul>}
               {login && <ul>
                 <li>
-                  <a href=''>Your Profile</a>
+                  <span>Your Profile</span>
                 </li>
                 <li>
-                  <a href=''>Your Orders</a>
+                  <span>Your Orders</span>
                 </li>
                 <li>
-                <a href='#' onClick={Islogout}>Logout</a>
+                <span onClick={Islogout}>Logout</span>
                 </li>
               </ul>}
             </div>

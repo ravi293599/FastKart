@@ -21,7 +21,7 @@ const FormPage = (props) => {
   const navigate = useNavigate();
   const [Register, Setregister] = useState(false)
   const [Forget, Setforget] = useState(false)
-  const [IsLogin, SetisLogin] = useState(false)
+  // const [IsLogin, SetisLogin] = useState(false)
   const isLogin = (payload) => {
     dispatch(login(payload));
   }

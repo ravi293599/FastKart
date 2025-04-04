@@ -1,18 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import "./Shop.scss"
 import LoginHeader from '../../LoginHeader/LoginHeader'
-//import Item1 from "../../../Assets/Images/Item1.png"
 import {AiOutlineEye, AiOutlineHeart, AiOutlinePlus} from "react-icons/ai";
 import {IoIosGitCompare} from "react-icons/io";
 import {BsDashLg} from "react-icons/bs";
 
 const Shop = () => {
-    let count = "";
     const [Items, setItems] = useState([])
-    //const [itemList, setItemList] = useState([])
     const itemAdd = (id) => {
-        //count = id;
-        //console.log("the item is clicked"+ this.id );
         console.log("Item added")
     }
     const itemDelete = (id) => {
