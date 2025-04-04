@@ -59,13 +59,13 @@ const Shop = () => {
                     <div className='card-wrapper' key={Item.id}>
                     <div className='Item-cart'>
                         <div className='Item-image'>
-                            <a href='#'>
+                            <a href="/login">
                             <img src={Item.url} alt="Item" />
                             </a>
                         </div>
                         <div className='Item-content'>
                             <p>{Item.category}</p>
-                            <a href='#'>
+                            <a href="/login">
                             <h3>{Item.title}</h3>
                             </a>
                             <div className='Rating'>

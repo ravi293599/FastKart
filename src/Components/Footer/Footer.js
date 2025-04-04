@@ -46,26 +46,26 @@ const Footer = () => {
           <h4>Categories</h4>
           <ul>
             <li>
-              <a href="#">Cookies</a>
+              <a href="/login">Cookies</a>
             </li>
             <li>
-              <a href="#">Cake</a>
+              <a href="/login">Cake</a>
             </li>
             <li>
-              <a href="#">Pastries</a>
+              <a href="/login">Pastries</a>
             </li>
             <li>
-              <a href="#">
+              <a href="/login">
                 Bread
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/login">
                 Snacks
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/login">
                 Namkeens
               </a>
             </li>
@@ -137,8 +137,8 @@ const Footer = () => {
           <div className='download-app'>
             <p>Download App :</p>
             <div>
-              <a href="#"><img src={playstore} alt="Google play" /></a>
-              <a href="#"><img src={appstore} alt="App Store" /></a>
+              <a href="/login"><img src={playstore} alt="Google play" /></a>
+              <a href="/login"><img src={appstore} alt="App Store" /></a>
             </div>
           </div>
         </div>
@@ -147,10 +147,10 @@ const Footer = () => {
         <div>©2020-{currentYear} Ravi Sharma All rights reserved</div>
         <div><img src={payment} alt="payment" /></div>
         <div>Stay connected :
-         <a href="#"> <FaFacebookF /></a>
-          <a href="#"><FaTwitter /> </a>
-          <a href="#"><FaInstagram /></a>
-          <a href="#"><FaPinterestP /></a>
+         <a href="/login"> <FaFacebookF /></a>
+          <a href="/login"><FaTwitter /> </a>
+          <a href="/login"><FaInstagram /></a>
+          <a href="/login"><FaPinterestP /></a>
         </div>
       </div>
     </footer>
