@@ -75,19 +75,19 @@ const Footer = () => {
           <h4>Useful Links</h4>
           <ul>
             <li>
-              <a href='#'>Home</a>
+              <a href="/login">Home</a>
             </li>
             <li>
-              <a href='#'>Shop</a>
+              <a href="/login">Shop</a>
             </li>
             <li>
-              <a href='#'>About Us</a>
+              <a href="/login">About Us</a>
             </li>
             <li>
-              <a href='#'>Blog</a>
+              <a href="/login">Blog</a>
             </li>
             <li>
-              <a href='#'>Contact Us</a>
+              <a href="/login">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -95,22 +95,22 @@ const Footer = () => {
           <h4>Help Center</h4>
           <ul>
           <li>
-            <a href='#'>Your Order</a>
+            <a href="/login">Your Order</a>
           </li>
           <li>
-            <a href='#'>Your Account</a>
+            <a href="/login">Your Account</a>
           </li>
           <li>
-            <a href='#'>Track Order</a>
+            <a href="/login">Track Order</a>
           </li>
           <li>
-            <a href='#'>Your Wishlist</a>
+            <a href="/login">Your Wishlist</a>
           </li>
           <li>
-            <a href='#'>Search</a>
+            <a href="/login">Search</a>
           </li>
           <li>
-            <a href='#'>FAQ</a>
+            <a href="/login">FAQ</a>
           </li>
           </ul>
         </div>
