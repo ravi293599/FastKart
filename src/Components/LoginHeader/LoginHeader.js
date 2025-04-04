@@ -11,7 +11,7 @@ const LoginHeader = (props) => {
         </div>
         <div className="Login-icon">
             <span>
-                <a href=""><AiFillHome /></a>
+                <a href="#"><AiFillHome /></a>
             </span>
             <span>
                 {props.pageName}

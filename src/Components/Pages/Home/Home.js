@@ -16,12 +16,12 @@ import { useNavigate } from 'react-router'
 
 const Home = () => {
     const usenavigate = useNavigate();
-    useEffect(() => {
-        let username = sessionStorage.getItem('name');
-        if(username === "" || username === null){
-            usenavigate('/login')
-        }
-    },[])
+    // useEffect(() => {
+    //     let username = sessionStorage.getItem('name');
+    //     if(username === "" || username === null){
+    //         usenavigate('/login')
+    //     }
+    // },[])
   return (
     <>
     <div className='row'>

@@ -29,11 +29,9 @@ const Shop = () => {
             }
         })
         .then(function(response){
-            //console.log(response)
             return response.json();
         })
         .then(function(myJson){
-            // const data = JSON.parse()
             setItems(myJson)
         });
     }
