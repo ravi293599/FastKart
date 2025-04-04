@@ -74,7 +74,7 @@ const FormPage = (props) => {
     if(props.btnName === "Forget Password"){
       Setforget(true);
     }
-  }); 
+  },[props.btnName]); 
   return (
     <>
       <div className="Form-row">

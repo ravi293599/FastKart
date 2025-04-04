@@ -1,6 +1,6 @@
-import React, { useReducer, useState } from 'react'
+import React, { useState } from 'react'
 import "./Header.scss"
-import {toast} from "react-toastify";
+// import {toast} from "react-toastify";
 import { IoIosArrowDown } from 'react-icons/io';
 import { IoCloseSharp } from 'react-icons/io5';
 import Logo from "../../Assets/Images/Logo.png"
